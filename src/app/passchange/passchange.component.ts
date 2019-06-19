@@ -62,7 +62,7 @@ export class PasschangeComponent implements OnInit {
   ngPassSub(){
     var obj1 = {
       'email' : this.userpass.email,
-      'password' : this.userchange.password
+      'newPassword' : this.userchange.newPassword
     }
     this._enrollmentService.finalChange(obj1)
     

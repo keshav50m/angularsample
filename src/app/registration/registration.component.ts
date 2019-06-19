@@ -26,7 +26,7 @@ export class RegistrationComponent implements OnInit {
       //   localStorage.setItem('token', res.token)
       // this.router.navigateByUrl('/login');
       },
-      data => console.log(this.userModle)
+      data => console.log(data)
       
     )
     this.router.navigateByUrl('/login');
