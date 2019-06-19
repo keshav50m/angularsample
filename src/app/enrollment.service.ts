@@ -58,4 +58,8 @@ export class EnrollmentService {
     localStorage.removeItem('token')
     this._router.navigateByUrl('/login')
   }
+
+  test(){
+    return this._http.get('http://localhost:3000/login');
+  }
 }

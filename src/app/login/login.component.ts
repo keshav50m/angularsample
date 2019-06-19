@@ -21,12 +21,29 @@ export class LoginComponent implements OnInit {
    this._enrollmentService.login(this.loginuserModle)
    .subscribe(
      res => {
-       console.log(res)
+       console.log(res.numberCheck);
+       console.log(res.passwordCheck);
+
+      if (res.numberCheck=== true || res.passwordCheck === true) {
+        this.router.navigateByUrl('/profile');
+        console.log(true);
+      }
+
+      else {
+        console.log(false);
+        this.router.navigateByUrl('/login')
+      }
+
+
        localStorage.setItem('token', res.token);
-       this.router.navigateByUrl('/profile');
+      
      },
      data => console.log(data)
    )
+
+   this._enrollmentService.test().subscribe(res =>{
+     console.log(res);
+   })
  }
 
 }
