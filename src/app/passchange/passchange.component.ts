@@ -12,7 +12,7 @@ import { Changep } from '../changep';
 export class PasschangeComponent implements OnInit {
   userpass = new Change('');
   userOTP = new OTP(null,'');
-  userchange = new Changep('','');
+  userChange = new Changep('','');
 
   isClicked : boolean = true;
   seClicked : boolean = true;
@@ -62,7 +62,7 @@ export class PasschangeComponent implements OnInit {
   ngPassSub(){
     var obj1 = {
       'email' : this.userpass.email,
-      'newPassword' : this.userchange.newPassword
+      'newPassword' : this.userChange.newPassword
     }
     this._enrollmentService.finalChange(obj1)
     

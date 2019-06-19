@@ -37,7 +37,7 @@
 
       <div class="form-group">
         <label>Phone</label>
-        <input type="tel" placeholder="Enter Number" required #call="ngModel" pattern="[0-9]{10}" [class.is-invlaid]="call.invalid && call.touched" class="form-control" name="number" [(ngModel)]="userModle.number">
+        <input type="number" placeholder="Enter Number" required #call="ngModel" pattern="[0-9]{10}" [class.is-invlaid]="call.invalid && call.touched" class="form-control" name="number" [(ngModel)]="userModle.number">
         <small class="text-danger" [class.d-none]="call.valid || call.untouched">
           Phone number must be 10 digits
         </small>

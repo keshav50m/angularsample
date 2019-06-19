@@ -43,8 +43,8 @@
                   <label>
                     New Password
                   </label>
-                  <input placeholder="Enter new Password" type="password" class="form-control" name="password"
-                    [(ngModel)]="userchange.password">
+                  <input placeholder="Enter new Password" type="password" class="form-control" name="newPassword"
+                    [(ngModel)]="userChange.newPassword">
                   <button class="btn btn-secondary" type="PassSub" (click)="ngPassSub(); thirdClick()">Change Password</button>
                   <div *ngIf='! thClicked'>
                       <small class="text-danger">
