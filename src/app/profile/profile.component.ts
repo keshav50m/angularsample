@@ -10,7 +10,7 @@ export class ProfileComponent implements OnInit {
 
   //public details;
  public authData= [];
- public user;
+ //public user;
   constructor(private httpClient: HttpClient, private configService: EnrollmentService) { }
 
   ngOnInit() {
@@ -22,8 +22,8 @@ export class ProfileComponent implements OnInit {
     this.configService.getConfig().subscribe((data => {
       //this.details = data[0];
       this.authData=data.authData;
-      this.user=this.authData[0];
-      console.log(data.authData.length+" flag");
+      //this.user=this.authData[0];
+      console.log(data.authData+" flag");
     }))
   }
 }

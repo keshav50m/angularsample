@@ -1,4 +1,4 @@
 export interface Details{
-    authData : any,
+    authData : [],
     message : string,
 }
