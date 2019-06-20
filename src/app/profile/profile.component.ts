@@ -8,18 +8,22 @@ import { EnrollmentService } from '../enrollment.service';
 })
 export class ProfileComponent implements OnInit {
 
-  public details = [];
-
+  //public details;
+ public authData= [];
+ //public user;
   constructor(private httpClient: HttpClient, private configService: EnrollmentService) { }
 
   ngOnInit() {
     this.showConfig();
+    //console.log(this.details);
   }
 
-  showConfig() 
-  {
-    this.configService.getConfig()
-      .subscribe((data => this.details = data)
-      )};
-
+  showConfig() {
+    this.configService.getConfig().subscribe((data => {
+      //this.details = data[0];
+      this.authData=data.authData;
+      //this.user=this.authData[0];
+      console.log(data.authData+" flag");
+    }))
+  }
 }

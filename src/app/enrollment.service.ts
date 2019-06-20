@@ -41,8 +41,8 @@ export class EnrollmentService {
     return this._http.post<any>(this.final, changep );
   }
 
-  getConfig(): Observable<Details[]>{
-    return this._http.get<Details[]>(this.configUrl);
+  getConfig(): Observable<Details>{
+    return this._http.get<Details>(this.configUrl);
   }
 
   loggedIn(){
@@ -59,7 +59,4 @@ export class EnrollmentService {
     this._router.navigateByUrl('/login')
   }
 
-  test(){
-    return this._http.get('http://localhost:3000/login');
-  }
 }

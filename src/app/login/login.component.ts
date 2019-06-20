@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
       else {
         console.log(false);
-        this.router.navigateByUrl('/login')
+        this.router.navigateByUrl('/change')
       }
 
 
@@ -41,9 +41,6 @@ export class LoginComponent implements OnInit {
      data => console.log(data)
    )
 
-   this._enrollmentService.test().subscribe(res =>{
-     console.log(res);
-   })
  }
 
 }
