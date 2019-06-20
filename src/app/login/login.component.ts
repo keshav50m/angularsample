@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
        console.log(res.numberCheck);
        console.log(res.passwordCheck);
 
-      if (res.numberCheck=== true || res.passwordCheck === true) {
+      if (res.numberCheck=== true && res.passwordCheck === true) {
         this.router.navigateByUrl('/profile');
         console.log(true);
       }

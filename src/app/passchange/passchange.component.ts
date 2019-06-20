@@ -12,7 +12,7 @@ import { Changep } from '../changep';
 export class PasschangeComponent implements OnInit {
   userpass = new Change('');
   userOTP = new OTP(null,'');
-  userChange = new Changep('','');
+  userChange = new Changep(null,'');
 
   isClicked : boolean = true;
   seClicked : boolean = true;

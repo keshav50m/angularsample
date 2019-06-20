@@ -1,6 +1,6 @@
 export class Changep {
     constructor(
-        public newPassword: string,
+        public newPassword: number,
         public email: string
     ){}
 }
