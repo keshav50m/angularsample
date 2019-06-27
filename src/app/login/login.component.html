@@ -27,15 +27,16 @@
 <div class="container-fluid mb -5 bg" class="centre bg">
 
 
-
+  
   <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    
     <div class="centered">
       <div class="form-wrapper">
         <h2 class="container">Login Form</h2>
         <div class="container">
           <div class="form-group">
             <label>Phone</label>
-            <input type="text" placeholder="Enter Number" class="form-control" name="number"
+            <input type="tel" placeholder="Enter Number" class="form-control" name="number"
               [(ngModel)]="loginuserModle.number">
 
             <label>Password</label>
@@ -43,16 +44,16 @@
               [(ngModel)]="loginuserModle.password">
 
             <button class="btn btn-primary" type="submit">Login</button>
+            <p>if not a user? <a href="/registration">Sign up</a></p>
             <!-- <label>
     <input type="checkbox" checked="checked" name="remember"> Remember me
     </label> -->
           </div>
           <span class="psw"> <a href="/change">Forgot password?</a></span>
-
+          
         </div>
-
       </div>
-
+      <ng-flash-message></ng-flash-message>
 
     </div>
 

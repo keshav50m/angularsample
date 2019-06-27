@@ -1,0 +1,12 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-left: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 2px black; 
+  
+  }

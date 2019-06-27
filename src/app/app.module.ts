@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { enrollmentGuard } from './enrollment.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
-
+import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { ProfileComponent } from './profile/profile.component';
 import { PasschangeComponent } from './passchange/passchange.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,9 @@ import { PasschangeComponent } from './passchange/passchange.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,  
-    HttpClientModule
+    HttpClientModule,
+    NgFlashMessagesModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [enrollmentGuard, {
     provide: HTTP_INTERCEPTORS,

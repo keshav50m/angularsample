@@ -13,16 +13,16 @@ import {Changep } from './changep'
 })
 export class EnrollmentService {
 
-  _url = 'http://localhost:3000/enroll';
-  __url = 'http://localhost:3000/login';
-  configUrl = 'http://localhost:3000/login/user';
-  newurl = 'http://localhost:3000/forgotPassword';
-  OTPurl = 'http://localhost:3000/forgotPassword/enterOtp';
-  final = 'http://localhost:3000/changePassword';
+  _url = 'http://192.168.1.100:3000/enroll';
+  __url = 'http://192.168.1.100:3000/login';
+  configUrl = 'http://192.168.1.100:3000/login/user';
+  newurl = 'http://192.168.1.100:3000/forgotPassword';
+  OTPurl = 'http://192.168.1.100:3000/forgotPassword/enterOtp';
+  final = 'http://192.168.1.100:3000/changePassword';
   constructor(private _http: HttpClient, private _router: Router) { }
 
-  enroll(user: User){
-    return this._http.post<any>(this._url, user);
+  enroll(userData: any){
+    return this._http.post<any>(this._url, userData);
   }
 
   login(loginuserModle: Loginusers){
